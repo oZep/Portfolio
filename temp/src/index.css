@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  --main-color: rgb(111, 0, 255);
-  --main-bg-color: rgb(208, 0, 255);
+  --main-color: rgba(139, 214, 170, 0.884);
+  --secondary-color: rgba(180, 255, 173, 0.671);
+  --main-bg-color: rgb(255, 255, 255);
+  --secondary-bg-color: rgb(255, 255, 255);
+  --main-text: rgb(0, 0, 0);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -18,6 +20,19 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #000000;
+    background-color: var(--main-color);
+  }
+  a:hover {
+    color: #000000;
+  }
+  button {
+    background-color: var(--main-color);
+  }
 }
 
 h1, h2, h3 {
@@ -34,20 +49,19 @@ h1, h2, h3 {
 }
 
 .background-image {
-  background: url(./assets/background.png);
+  background: url(./assets/background.jpg);
   background-repeat: repeat;
-  background-size: 190px;
-  background-position: 137px 100px;
+  background-size: cover;
   position: absolute;
   width: 100%;
-  height: 60%; 
+  height: 100%; 
 }
 
 .background-gradient {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(255, 244, 251, 0) 30%, var(--main-bg-color), 50%, var(--main-color));
+  background: linear-gradient(180deg, rgba(255, 244, 251, 0) 30%, var(--main-bg-color), 50%, var(--secondary-bg-color));
 }
 
 nav {
@@ -61,7 +75,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #000ac9;
+  color: var(--secondary-color);
 }
 
 body {
@@ -69,6 +83,7 @@ body {
   display: flex;
   place-items: center;
   overflow-x: hidden;
+  color: var(--main-text)
 }
 
 h1 {
@@ -89,19 +104,6 @@ button:focus-visible {
   outline: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: var(--main-color);
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: var(--main-color);
-  }
-}
-
 .column-container {
   display: grid;
   align-content: center;
@@ -116,19 +118,15 @@ button:focus-visible {
 
 .navbutton {
   cursor: pointer;
-  color: white;
   border: none;
+  color: var(--main-text);
   width: 100%;
-  border: 4px solid white;
-  border-left: none;
-  border-right: none;
   padding: 8px 8px 8px 32px;
   background: var(--main-color);
-  background: linear-gradient(270deg, rgba(255, 244, 251, 0) 0%, var(--main-color), 20%, var(--main-color));
 }
 
 .navbutton:hover {
-  background: #0887ff;
+  background: var(--secondary-color);
 }
 
 
@@ -143,13 +141,13 @@ button:focus-visible {
   margin-top: -14px
 }
 
-.animatebutton {
-  color: white;
+.credits {
   border: none;
   width: 100%;
-  padding: 8px 8px 8px 32px;
+  padding: 8px 32px;
   background: transparent;
   user-select: none;
+  text-align: center;
 }
 
 .stickem {
@@ -157,19 +155,16 @@ button:focus-visible {
 }
 
 a {
-  color: white;
   text-decoration: none;
 }
 
 .skills-title-container {
   user-select: none;
   padding: 0.75rem;
-  color: white;
   font-weight: 800;
   font-size: 1.5rem;
   text-align: center;
   padding-top: 2rem;
-  background: linear-gradient(180deg, rgba(255, 244, 251, 0) 0%, var(--main-color), 50%, var(--main-color))
 }
 
 .icon {
@@ -180,5 +175,8 @@ a {
 }
 
 .skills-container {
-  background: linear-gradient(0deg, rgba(255, 244, 251, 0) 0%, var(--main-color), 20%, var(--main-color));
+}
+
+.widget {
+  background-color: var(--secondary-color);
 }

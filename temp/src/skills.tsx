@@ -11,7 +11,9 @@ const Skills = (props: SkillsProps) => {
             <div className="skills-title-container">
                 {props.title}
             </div>
-            {props.children}
+            <div >
+                {props.children}
+            </div>
         </div>
     );
 };

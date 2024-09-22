@@ -41,7 +41,7 @@ const Right = () => {
                                         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", alt: "javascript logo" },
                                         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", alt: "html5 logo" }
                                     ].map((icon, index) => (
-                                        <div key={index} className="icon flex items-center justify-center w-[48px] h-[48px] m-2">
+                                        <div key={index} className="icon flex items-center justify-center w-[48px] h-[48px] m-1">
                                             <img src={icon.src} alt={icon.alt} />
                                         </div>
                                     ))}
