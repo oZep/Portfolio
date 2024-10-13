@@ -32,7 +32,7 @@ const Left = () => {
                         <li><a href="#Project"><button className='navbutton'>Projects</button></a></li>
                         <li><a href="#Contacts"><button className='navbutton'>Contacts</button></a></li>
                     </ul>
-                    <div className=''>
+                    <div className='text-black'>
                         <div className='credits'>Created by Joey Issa</div>
                         <div>
                             <div className="flex justify-center flex-row gap-2">
